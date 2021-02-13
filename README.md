@@ -2,6 +2,8 @@
 Source code for the test plane to collect image data to train our CV models with.
 
 ## Setup
+If you don't already have it, download Android Studio from https://developer.android.com/studio.
+
 When downloading and running this project for the first time, first clone the repository, then, open up Android Studio and open the project.
 The project to be opened is 
 ```
