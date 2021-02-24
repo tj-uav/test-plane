@@ -9,6 +9,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import android.os.CountDownTimer;
+import android.widget.Button;
+
 public class FirstFragment extends Fragment {
 
     @Override
@@ -26,8 +29,20 @@ public class FirstFragment extends Fragment {
         view.findViewById(R.id.start_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+                new CountDownTimer(10000, 1000) {
+                    Button but = (Button)view.findViewById(R.id.start_button);
+                    public void onTick(long millisUntilFinished) {
+                        but.setText("" + millisUntilFinished / 1000);
+                    }
+
+                    public void onFinish() {
+                        but.setText("Bye bye!");
+                        NavHostFragment.findNavController(FirstFragment.this)
+                                .navigate(R.id.action_FirstFragment_to_SecondFragment);
+                    }
+                }.start();
+
+
 
                 // put the code to delay and start taking pictures here
 
