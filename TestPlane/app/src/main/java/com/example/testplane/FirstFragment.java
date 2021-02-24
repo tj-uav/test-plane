@@ -39,12 +39,13 @@ public class FirstFragment extends Fragment {
                         but.setText("Bye bye!");
                         NavHostFragment.findNavController(FirstFragment.this)
                                 .navigate(R.id.action_FirstFragment_to_SecondFragment);
+                        // put the code to start taking pictures here (or in second fragment if you want)
                     }
                 }.start();
 
 
 
-                // put the code to delay and start taking pictures here
+
 
 
             }
