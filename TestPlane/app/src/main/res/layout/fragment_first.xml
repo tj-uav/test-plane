@@ -6,31 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
 
-    <TextView
-        android:id="@+id/textview_first"
-        android:layout_width="283dp"
-        android:layout_height="67dp"
-        android:gravity="center"
-        android:text="Click this button to start taking pictures! There is a 10 second delay between pressing the button and the app taking pictures."
-        app:layout_constraintBottom_toTopOf="@id/start_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextureView
         android:id="@+id/texture"
         android:layout_width="402dp"
-        android:layout_height="731dp" />
-
+        android:layout_height="630dp" />
 
     <Button
         android:id="@+id/start_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start taking pictures"
+        android:text="Start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+        app:layout_constraintTop_toBottomOf="@id/texture"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
